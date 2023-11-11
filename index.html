@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/76fefd33c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="menu">
+  <h1>The Amazing Maze</h1>
+  <h2>Can you do it? It's really hard!</h2>
+  
+  <div class="menu-items">
+    <input type="text" style="display: none;" class="input-data" placeholder="Paste map data here"></input>
+    <a href="#" onclick="play()">Play</a>
+    <a href="#" onclick="create()" style="display: none;"></a>
+  </div>
+  <h2><span style="color: rgb(255, 50, 50);">WARNING</span> : bawal sa pikon T-T</h2>
+</div>
+
+
+<div class="game">
+  <!-- uncomment if you need to check map/tile data -->
+  <div class="editor-ui">
+    <div class="selectors">
+        <div class="audio-selectors"> 
+        </div>
+        <div class="image-selectors">
+          <!-- <span class="header">
+            Select image
+          </span> -->
+          <div>           
+            <img src="//media.giphy.com/media/LLHkw7UnvY3Kw/giphy.gif" class="image-selector selected" id="img0" onclick="selectImage(0)"></img>
+            <img src="//orion-uploads.openroadmedia.com/lg_380efe-pennywiseweb.jpg" class="image-selector" id="img1" onclick="selectImage(1)"></img>
+            <img src="//" class="image-selector" id="img2" onclick="selectImage(2)"></img>
+            <img src="//https://media.tenor.com/bpwoArWF8hoAAAAC/scary-face.gif" class="image-selector" id="img3" onclick="selectImage(3)"></img>
+          </div>
+        </div>
+      </div>    
+    <a href="#" class="btn-map-data" onclick="toggleMapData()" title="You can copy paste this data and share it with your friends">Toggle sharable map data</a> 
+    <a href="#" class="btn-play-map" onclick="togglePreview()" title="You can preview the final maze before sharing with your friends">Toggle preview</a>    
+    <span class="map-data"></span>        
+  </div>
+  <div class="game-ui">    
+    <span>Start the game by moving the mouse to the green box with a 'S'</span><br/>
+    <span>To win, reach the flag without touching any walls.</span><br/>
+    <span>Good luck!</span>        
+    <a href="#" class="btn-create-own" onclick="resetAndCreate()"></a>
+  </div>
+  <a href="#" class="btn-start" onmouseover="startGame()">S</a>
+  <canvas class="le-canvas"></canvas>    
+</div>
+<div class="win-overlay">
+  <img class="image-overlay"></img>
+</div>  
+<div class="lose-overlay">
+  <div class="message-overlay">
+    Oh no! Pasmado kana sis<br/>Try mo nalang ulit sis! <br/> I Love you 
+  </div>
+</div>
+  </body>
+  <script src="js.js"></script>
+</html>
